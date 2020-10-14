@@ -10,7 +10,13 @@
   <script type="module">
     const rootElement = document.getElementById('root')
 
-    const element = React.createElement('div', { children: 'Hello World', className : 'container' })
+    const firstChild = React.createElement('span', { children: 'Hello' })
+    // const firstChild = React.createElement('span', { }, 'Hello')
+    const secondChild = React.createElement('span', { children: 'World' })
+    // const secondChild = React.createElement('span', { }, 'World')
+
+    const element = React.createElement('div', { children: [firstChild, secondChild], className : 'container' })
+    // const element = React.createElement('div', { className : 'container' }, firstChild, secondChild)
 
     ReactDOM.render(element, rootElement)
   </script>
