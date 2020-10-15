@@ -9,7 +9,12 @@
   <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
 
   <script type="text/babel">
-    const element = <div className="container">Hello World</div>
+
+    const greeting = 'Hello';
+    const subject = 'World'
+    const className = 'container'
+
+    const element = <div className={className}>{`${greeting} ${subject}`}</div>
 
     // 💰 there are a few subtle differences between JSX and HTML. One such
     // difference is how you apply a class to an element in JSX is by using
